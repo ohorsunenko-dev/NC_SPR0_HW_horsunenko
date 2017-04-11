@@ -14,7 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MainController {
     ApplicationContext context = new ClassPathXmlApplicationContext("Config.xml");
-    InfoDao infoDao = (InfoDao) context.getBean("infoDao");
+    InfoDao infoDao = (InfoDao) context.getBean("InfoDao");
 
     @RequestMapping(value = "/insert", method = RequestMethod.POST)
     public ModelAndView InsertInfo(@ModelAttribute Info info) {
@@ -28,7 +28,7 @@ public class MainController {
         model.addAttribute("id", info.getId());
         model.addAttribute("lastName", info.getLastName());
         model.addAttribute("firstName", info.getFirstName());
-        model.addAttribute("comment", info.getLastName());
+        model.addAttribute("comment", info.getComment());
 
         return "hello";
     }
