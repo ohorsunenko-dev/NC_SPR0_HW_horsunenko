@@ -20,7 +20,7 @@ public class InfoDaoImpl implements InfoDao{
 
     public void insertInfo(Info info){
 
-        String sql = "INSERT INTO INFO (ID, LASTNAME, FIRSTNAME, COMMENT) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO INFO (ID, LASTNAME, FIRSTNAME, COMMENT_TEXT) VALUES (?, ?, ?, ?)";
         Connection conn = null;
 
         try {
@@ -29,7 +29,7 @@ public class InfoDaoImpl implements InfoDao{
             ps.setInt(1, info.getId());
             ps.setString(2, info.getLastName());
             ps.setString(3, info.getFirstName());
-            ps.setString(4, info.getComment());
+            ps.setString(4, info.getCommentText());
             ps.executeUpdate();
             ps.close();
 
@@ -47,7 +47,7 @@ public class InfoDaoImpl implements InfoDao{
 
     public Info getById(int id) {
 
-        String sql = "SELECT * FROM INFO WHERE ID = ?";
+        String sql = "SELECT ID, LASTNAME, FIRSTNAME, COMMENT_TEXT FROM INFO WHERE ID = ?";
 
         Connection conn = null;
 
@@ -59,10 +59,10 @@ public class InfoDaoImpl implements InfoDao{
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 info = new Info();
-                rs.getInt("ID");
-                rs.getString("LASTNAME");
-                rs.getString("FIRSTNAME");
-                rs.getString("COMMENT");
+                info.setId(rs.getInt("ID"));
+                info.setLastName(rs.getString("LASTNAME"));
+                info.setFirstName(rs.getString("FIRSTNAME"));
+                info.setCommentText(rs.getString("COMMENT_TEXT"));
             }
             rs.close();
             ps.close();

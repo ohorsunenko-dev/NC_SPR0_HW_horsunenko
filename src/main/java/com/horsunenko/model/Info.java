@@ -5,7 +5,7 @@ public class Info {
     protected int id;
     protected String lastName;
     protected String firstName;
-    protected String comment;
+    protected String comment_text;
 
     public int getId() {
         return id;
@@ -31,11 +31,11 @@ public class Info {
         this.firstName = firstName;
     }
 
-    public String getComment() {
-        return comment;
+    public String getCommentText() {
+        return comment_text;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setCommentText(String comment_text) {
+        this.comment_text = comment_text;
     }
 }

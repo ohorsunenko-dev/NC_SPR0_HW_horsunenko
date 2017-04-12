@@ -13,10 +13,10 @@
 
         <div align="center">
         <h2>About</h2>
-        <c:out value="${id}"></c:out></h3>
+        <p><c:out value="Id: " /><c:out value="${id}"></p>
         <p><c:out value="Last name: " /><c:out value="${lastName}" /> </p>
         <p><c:out value="First name:" /><c:out value="${firstName}" /></p>
-        <p><c:out value="Comment: " /><c:out value="${comment}" /></p>
+        <p><c:out value="Comment_text: " /><c:out value="${comment_text}" /></p>
         </div>
 
 

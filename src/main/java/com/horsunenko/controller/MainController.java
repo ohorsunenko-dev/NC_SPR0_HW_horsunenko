@@ -28,8 +28,8 @@ public class MainController {
         model.addAttribute("id", info.getId());
         model.addAttribute("lastName", info.getLastName());
         model.addAttribute("firstName", info.getFirstName());
-        model.addAttribute("comment", info.getComment());
+        model.addAttribute("comment_text", info.getCommentText());
 
-        return "hello";
+        return "index";
     }
 }

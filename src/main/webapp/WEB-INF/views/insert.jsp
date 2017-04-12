@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +14,7 @@
 
         <div align="center">
             <h1>New Info</h1>
-            <form:form action="insertInfo" method="post" modelAttribute="Info">
+            <form:form action="insertInfo" method="post" modelAttribute="info">
             <table>
                 <form/>
                 <tr>
@@ -29,8 +30,8 @@
                     <td><form:input path="firstName" /></td>
                 </tr>
                 <tr>
-                    <td>Comment:</td>
-                    <td><form:input path="comment" /></td>
+                    <td>Comment_text:</td>
+                    <td><form:input path="comment_text" /></td>
                 </tr>
                 <tr>
                     <td colspan="2" align="center"><input type="submit" value="Save"></td>
