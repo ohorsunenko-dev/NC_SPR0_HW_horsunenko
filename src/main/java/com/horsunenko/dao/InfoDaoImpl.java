@@ -20,7 +20,7 @@ public class InfoDaoImpl implements InfoDao{
 
     public void insertInfo(Info info){
 
-        String sql = "INSERT INTO INFO (ID, LASTNAME, FIRSTNAME, COMMENT_TEXT) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO info (ID, LASTNAME, FIRSTNAME, COMMENT_TEXT) VALUES (?, ?, ?, ?)";
         Connection conn = null;
 
         try {
@@ -47,7 +47,7 @@ public class InfoDaoImpl implements InfoDao{
 
     public Info getById(int id) {
 
-        String sql = "SELECT ID, LASTNAME, FIRSTNAME, COMMENT_TEXT FROM INFO WHERE ID = ?";
+        String sql = "SELECT ID, LASTNAME, FIRSTNAME, COMMENT_TEXT FROM info WHERE ID = ?";
 
         Connection conn = null;
 

@@ -9,3 +9,5 @@ CREATE TABLE info(
 
 INSERT INTO info (ID, LASTNAME, FIRSTNAME, COMMENT_TEXT) VALUES (1, 'Ivanovich', 'Ivan', 'men');
 INSERT INTO info (ID, LASTNAME, FIRSTNAME, COMMENT_TEXT) VALUES (2, 'Petrovich', 'P', '!!!!!');
+
+COMMIT;
